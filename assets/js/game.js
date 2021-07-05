@@ -1,4 +1,5 @@
 var playerName = window.prompt("What is your robot's name?");
+var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 var playerHealth = 100;
 var playerAttack = 10;
 
