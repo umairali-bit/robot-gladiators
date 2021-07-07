@@ -29,7 +29,7 @@ var fight = function(enemyName) {
     }
 
     // remove enemy's health by subtracting the amount set in the playerAttack variable
-    enemyHealth = Math.max(0, enemyHealth - playerAttack);
+    enemyHealth = enemyHealth - playerAttack;
     console.log(
       playerName + ' attacked ' + enemyName + '. ' + enemyName + ' now has ' + enemyHealth + ' health remaining.'
     );
@@ -48,7 +48,7 @@ var fight = function(enemyName) {
     }
 
     // remove players's health by subtracting the amount set in the enemyAttack variable
-    playerHealth = Math.max(0, playerHealth - enemyAttack);
+    playerHealth = playerHealth - enemyAttack;
     console.log(
       enemyName + ' attacked ' + playerName + '. ' + playerName + ' now has ' + playerHealth + ' health remaining.'
     );
@@ -82,7 +82,7 @@ var startGame = function() {
       var pickedEnemyName = enemyNames[i];
 
       // reset enemyHealth before starting new fight
-      enemyHealth = Math.floor(Math.random() * 21) + 40;
+      enemyHealth = 50;
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyName);
@@ -129,6 +129,7 @@ var endGame = function() {
     window.alert('Thank you for playing Robot Gladiators! Come back soon!');
   }
 };
+
 // go to shop between battles function
 var shop = function() {
   // ask player what they'd like to do
